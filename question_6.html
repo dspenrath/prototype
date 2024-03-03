@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 60px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+h1 {
+  background-color: red;
+  color: white;
+font-size: 40px;
+}
+
+h2 {
+ 
+font-size: 40px;
+}
+
+h3 {
+  background-color: black;
+  color: white;
+  font-size: 40px;
+}
+
+p {
+  font-size: 40px;
+}
+
+</style>
+
+<script>
+
+
+
+
+function wrong() {
+  document.getElementById('demo').innerHTML = `<h1>Wrong answer</h1>`;
+  setTimeout(() => {
+    document.getElementById('demo').innerHTML = '';
+  }, 1000)
+}
+
+function correct() {
+  document.getElementById('demo').innerHTML = `<h3>Correct! You won $0.25</h3><br><button class="button button1" type="button" onclick="document.location='question_7.html';">Go to next question</button>`;
+  
+}
+
+</script>
+
+
+
+</head>
+<body>
+<p>Winnings: $1.25</p>
+
+
+<img src="img\grinder.jpg" alt="company factory" width="400" >
+<h2>Should you wear a faceshield while grinding ?<h2>
+
+<p id="demo"></p>
+<br>
+<br><button class="button button1" type="button" onclick="correct()">Yes</button>
+<br><button class="button button1" type="button" onclick="wrong()">No</button>
+
+
+
+
+
+</body>
+</html>
